@@ -12,3 +12,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav {
+  background-color: rgba(175, 207, 233, 0.9);
+  color: rgb(26, 19, 19);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.nav ul{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem
+}
+
+.nav li{
+  letter-spacing: 2px;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.nav li:hover {
+  background-color: #5386f3;
+}
+
+.error {
+  color: red;
+}
+
+.bookings-container {
+  width: fit-content;
+  display: inline-block;
+  text-align: left;
+}
+
+.all-bookings-title {
+  font-size: 50px;
+}
