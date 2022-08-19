@@ -31,7 +31,6 @@ function App() {
               <Header />
               <Bookings bookings={bookings} key={bookings.id}/>
             </Route>
-          
           </Switch>
         </div>
       </BrowserRouter>
