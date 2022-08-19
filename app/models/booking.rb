@@ -3,7 +3,7 @@ class Booking < ApplicationRecord
     validates :last_name, presence: true
     validates :animal_name, presence: true
     validates :animal_type, inclusion: { in: %w(dog cat)}
-    validates :hours_requested, numericality: { in: 2..5 }
+    validates :hours_requested, numericality: { in: 2..8 }
     validate :tester
 
         def tester

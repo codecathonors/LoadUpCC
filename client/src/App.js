@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Form from "./Form";
@@ -8,7 +6,6 @@ import Bookings from "./Bookings";
 
 function App() {
   const [bookings, setBookings] = useState([])
-  // const [total, setTotal] = useState(0)
 
   useEffect(() => {
     fetch('/bookings')
@@ -17,21 +14,11 @@ function App() {
 
   }, []);
 
-  // console.log(bookings)
-
-  // function handleTotal(calculatedTotal) {
-  //   setTotal(calculatedTotal)
-  // }
-
   function handleNewBooking(newbook) {
     setBookings([...bookings], newbook)
   }
   
-
   return (
-    // <div className="App">
-    //   <h1>Pet Sitter App</h1>
-      
       <BrowserRouter>
         <div className="App">
           <Switch>

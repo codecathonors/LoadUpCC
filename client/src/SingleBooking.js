@@ -1,18 +1,7 @@
 import React from "react";
 
 function SingleBooking({ booking }) {
-    console.log(booking)
-
-    //  function calculateTotal() {
-    //     if (animalType === "cat") {
-    //         let total = (20 + (hoursRequested * 5))
-    //         // handleTotal(total)
-    //         alert(`Thank you for booking with LoadUp! Your total comes out to $${total}.00. We can't wait to see ${animalName}!`)
-    //     } else {
-    //         let total = (20 + (hoursRequested * 10))
-    //         // handleTotal(total)
-    //         alert(`Thank you for booking with LoadUp! Your total comes out to $${total}.00. We can't wait to see ${animalName}!`)
-    // }}
+    // console.log(booking)
 
     function calculateAmountDue() {
         if (booking.animal_type === "cat") {
@@ -32,7 +21,6 @@ function SingleBooking({ booking }) {
             <h4>Total Amount Due: 
                 <div className="error">{calculateAmountDue()}</div></h4>
             <h4>Hours of Service: {booking.hours_requested}</h4>
-            
         </div>
     )
 }

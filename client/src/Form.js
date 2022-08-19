@@ -8,7 +8,6 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
    const [hoursRequested, setHoursRequested] = useState(0);
    const [dateOfService, setDateOfService] = useState("");
    const [bookingError, setBookingError] = useState("");
-//    const [sitterTotal, setTotal] = useState(0)
 
    function handlePetType(e) {
         setAnimalType(e.target.value)
@@ -41,6 +40,7 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
                 if (res.status === 201) {
                     res.json().then((json) => {
                         handleNewBooking(json)
+                        window.location.reload(true);
                         calculateTotal()
                     })
                     // console.log(bookings)
@@ -78,11 +78,9 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
     function calculateTotal() {
         if (animalType === "cat") {
             let total = (20 + (hoursRequested * 5))
-            // handleTotal(total)
             alert(`Thank you for booking with LoadUp! Your total comes out to $${total}.00. We can't wait to see ${animalName}!`)
         } else {
             let total = (20 + (hoursRequested * 10))
-            // handleTotal(total)
             alert(`Thank you for booking with LoadUp! Your total comes out to $${total}.00. We can't wait to see ${animalName}!`)
     }}
 
@@ -136,10 +134,7 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
                 
                 <button className="normal">Book it!</button>
                 {bookingError && <div className="error"><b>{bookingError}</b></div>}
-                
             </form>
-
-
         </div>
     );
 }
