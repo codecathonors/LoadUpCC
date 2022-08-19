@@ -85,26 +85,27 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
     }}
 
     return (
+        <>
         <div className="form-app" style={{ border: '4px solid blue', borderRadius: 20, paddingLeft: 30, paddingRight: 30, paddingBottom: 30 }}>
             <form className="form-container" onSubmit={handleSubmit}>
-                <h2 className="form-header">Make a Booking</h2>
+                <h2 className="form-header">New Booking</h2>
                 <label>First Name:
-                    <input onChange={e => setFirstName(e.target.value)}></input>
+                    <input className="input-pointer" onChange={e => setFirstName(e.target.value)}></input>
                 </label>
                 <br></br>
                 <br></br>
                 <label>Last Name:
-                    <input onChange={e => setLastName(e.target.value)}></input>
+                        <input className="input-pointer" onChange={e => setLastName(e.target.value)}></input>
                 </label>
                 <br></br>
                 <br></br>
                 <label>Pet's Name:
-                    <input onChange={e => setAnimalName(e.target.value)}></input>
+                        <input className="input-pointer" onChange={e => setAnimalName(e.target.value)}></input>
                 </label>
                 <br></br>
                 <br></br>
                 <label>Pet Type:
-                    <select value={animalType} onChange={handlePetType} >
+                        <select className="input-pointer" value={animalType} onChange={handlePetType} >
                         <option value=""></option>
                         <option value="cat">Cat</option>
                         <option value="dog">Dog</option>
@@ -112,8 +113,8 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
                 </label>
               
                 
-                <label>Hours Requested:
-                    <select value={hoursRequested} onChange={handleHoursRequested}>
+                <label> Hours Requested:
+                        <select className="input-pointer" value={hoursRequested} onChange={handleHoursRequested}>
                         <option value=""></option>
                         <option value="2">2 hours</option>
                         <option value="3">3 hours</option>
@@ -127,15 +128,28 @@ function Form({ handleNewBooking, bookings, handleTotal }) {
                 <br></br>
                 <br></br>
                 <label>Date of Service:
-                    <input onChange={e => setDateOfService(e.target.value)} placeholder="YYYY-MM-DD"></input>
+                        <input className="input-pointer" onChange={e => setDateOfService(e.target.value)} placeholder="YYYY-MM-DD"></input>
                 </label>
                 <br></br>
                 <br></br>
                 
-                <button className="normal">Book it!</button>
+                <button className="btn">Book it!</button>
                 {bookingError && <div className="error"><b>{bookingError}</b></div>}
+                
+                <div className="fee-disclaimer" style={{border: '4px solid blue' }}>
+                
+                Our Prices:
+                <br></br>
+                <br></br>
+                        Cat sitting is a <b>$20</b> <u>base fee</u> and <b>$5</b> <u>per hour</u>.
+                <br></br>
+                        Dog sitting is a <b>$20</b> <u>base fee</u> fee and $10 <u>per hour</u>.
+                </div>
             </form>
         </div>
+            <div className="rating">LoadUp values honesty and transparency when it comes to your pet. No hidden fees <i>(or fleas!)</i> here.
+        </div>
+        </>
     );
 }
 
