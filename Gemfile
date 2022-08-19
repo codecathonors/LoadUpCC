@@ -9,6 +9,11 @@ gem "faker"
 #testing
 gem 'pry-byebug'
 
+#rspec
+source "https://rubygems.org"
+
+gem "rspec"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 

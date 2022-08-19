@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -13,21 +11,33 @@ code {
     monospace;
 }
 
+.fee-disclaimer {
+  font-size: 20px;
+  
+  padding: 40px;
+  padding-top: 20px;
+  margin-top: 10px;
+  background-color: rgb(156, 187, 226);
+  border-radius: 10px;
+}
+
 .nav {
   background-color: rgba(175, 207, 233, 0.9);
   color: rgb(26, 19, 19);
   display: flex;
+  font-size: 20px;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   padding: 0 1rem;
   overflow: hidden;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .nav ul{
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 2rem
+  gap: 4rem
 }
 
 .nav li{
@@ -59,4 +69,37 @@ code {
 
 .all-bookings-title {
   font-size: 50px;
+}
+
+.form-app{
+  width: fit-content;
+  margin: auto;
+  height: auto;
+  padding-top: 15px;
+}
+
+.input-pointer {
+  cursor: pointer;
+}
+
+.rating {
+  padding-top: 150px;
+  font-size: 30px;
+  color: blue; 
+}
+
+.form-header {
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: rgb(156, 187, 226);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: rgb(146, 167, 199);
+  border-radius: 4px;
 }
